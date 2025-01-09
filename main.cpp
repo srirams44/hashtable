@@ -38,7 +38,7 @@ int main() {
 	        //Make sure you have a destructor to remove unused memory if "new" is used
 	    }
 	    else if (strcasecmp(answer, "AVERAGE") == 0) {
-	    	
+
 	        //Average the GPA for all stored users, print up to 2 decimal places
 	    }
 	    else if (strcasecmp(answer, "QUIT") == 0) {
