@@ -8,9 +8,9 @@ using namespace std;
 
 class Node {
 public:
-    Node(Student* newStudent); //constructor
+    Node(Student* newStudent); //constructors
     ~Node(); //destructor
-    void setStudent(Student* newStudent);
+    void setStudent(Student* newStudent); 
     Student* getStudent();
     void setNext(Node* newNext);
     Node* getNext();

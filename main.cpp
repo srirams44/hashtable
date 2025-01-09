@@ -20,11 +20,9 @@ int main() {
 	        cout << "Name: " << fname << " " << lname << endl << "ID: " << id << " GPA: " << gpa << endl;
 	        Student* myStudent = new Student(fname, lname, id, gpa);
 	        mylist.Add(myStudent);
-	        //Use ADD function from llist.h to add new node
-	        //Should prompt user with first name, lastname, student id, and gpa
 	    }
 	    else if (strcasecmp(answer, "PRINT") == 0) {
-	        mylist.Print();
+	        //mylist.Print();
 	        //Use PRINT function from llist.h to print all stored data
 	        //If there is no data, tell the user this
 	    }
@@ -33,7 +31,7 @@ int main() {
 	        int id;
 	        cin >> id;
 	        cin.getline(trash, 100);
-	        mylist.Delete(id);
+	        //mylist.Delete(id);
 	        //Prompt user for student id and remove that specific node from the list, make sure the links are still the same
 	        //Make sure you have a destructor to remove unused memory if "new" is used
 	    }

@@ -10,6 +10,7 @@ public:
     Node* getHead();
     Node* getTail();
     void Add(Student* data);
+    Node* AddRecursive(Node* current, Node* newNode);
     void Print();
     void Delete(int id);
 

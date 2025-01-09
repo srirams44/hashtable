@@ -13,6 +13,23 @@ Student::Student(const char* argfname, const char* arglname, int argid, float ar
     gpa = arggpa;
 }
 
+const char* Student::getFirstName() const {
+  return fname;
+}
+
+const char* Student::getLastName() const {
+  return lname;
+}
+
+int Student::getID() const {
+  return id;
+}
+
+float Student::getGPA() const {
+  return gpa;
+}
+
+
 Student::~Student() {
   delete[] fname;
   delete[] lname;
