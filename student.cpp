@@ -13,11 +13,11 @@ Student::Student(const char* argfname, const char* arglname, int argid, float ar
     gpa = arggpa;
 }
 
-const char* Student::getFirstName() const {
+const char* Student::getFName() const {
   return fname;
 }
 
-const char* Student::getLastName() const {
+const char* Student::getLName() const {
   return lname;
 }
 

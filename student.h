@@ -6,8 +6,8 @@ class Student {
     public:
         Student(const char* fname, const char* lname,  int id, float gpa); //Student Constructor
         ~Student(); //Student destructor
-        const char* getFirstName() const;
-        const char* getLastName() const;
+        const char* getFName() const;
+        const char* getLName() const;
         int getID() const;
         float getGPA() const;
 

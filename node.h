@@ -2,7 +2,7 @@
 #define NODE_H
 #include "student.h"
 #include <iostream>
-#include <cstring>
+//#include <cstring>
 
 using namespace std;
 
