@@ -1,13 +1,12 @@
 #include "node.h"
 #include <iostream>
-#include <cstring>
 
 using namespace std; 
 
 //Node Constructor 
 Node::Node(Student* newStudent) {
     student = newStudent;  
-    next = nullptr;        //Node is not pointing to another node
+    next = nullptr; //Node is not pointing to another node
 }
 
 

@@ -4,6 +4,7 @@
 slist::slist() {
   head = nullptr;
   tail = nullptr;
+  cout << "Constructor: " << this << endl;
 }
 slist::~slist() {
   Node* current = head; //Start at the head, while current is not nullptr, save the current node, move to the next node and delete the temp variable
@@ -24,7 +25,6 @@ Node* slist::getTail() {
 
 void slist::Add(Student* data) {
     Node* newNode = new Node(data); //Create a new node with the data passed in
-
     //If the list is empty, make the new node the head and tail
     if (!head) {
       head = tail = newNode;
@@ -32,11 +32,6 @@ void slist::Add(Student* data) {
     }
     head = AddHelper(head, newNode); //Recursive helper function to sort the nodes
 }
-
-//Create a new entry for each student, will prompt for a first name, last name, student id and GPA.
-//All data should be thrown into a node and put into the linked list.
-//Sort by student id, this is most easily done by looking for a student id bigger then the id passed in, then placing it there.
-
 Node* slist::AddHelper(Node* current, Node* newNode) {
   //Break case, when we reach an id bigger then current, or reach the end of the list
   if (!current || newNode->getStudent()->getID() < current->getStudent()->getID()) {
@@ -48,17 +43,11 @@ Node* slist::AddHelper(Node* current, Node* newNode) {
   return current;
 }
 
-
-
-
    void slist::Print() {
-  //This function will print out all nodes in order of First Name, Last Name, ID, and GPA
-  //If there are no nodes, print that out and ask for a next action.
-  if (!head) {
+  if (!head) { //If there's no head, the list is empty
     cout << "This list is empty." << endl;
     return;
   }
-
   PrintHelper(head);
 }
 
@@ -66,26 +55,25 @@ void slist::PrintHelper(Node* current) {
   if (!current) { //Break case, reached the end of the list
     return;
   }
-
   Student* student = current->getStudent(); //Print current student's details
   cout << student->getFName() << " " << student->getLName() << ", " << student->getID() << fixed << setprecision(2) << ", " << student->getGPA() << endl;
   PrintHelper(current->getNext());
 }
 
 bool slist::checkList() {
-  if (!head) {
+  if (!head) { //No head, list is empty
     return false;
   }
   return true;
 }
 
 void slist::Delete(int id) {
-  if (!head) {
+  if (!head) { //If it's empty, you can't delete anything!
     cout << "This list is empty. Nothing to delete." << endl;
     return;
   }
 
-  head = DeleteHelper(head, id);
+  head = DeleteHelper(head, id); //Helper function
 
   //If there's no head after the deletion, update the tail
   if (!head) {
@@ -138,7 +126,3 @@ void slist::AverageHelper(Node* current, float& sum, int& count) { //pass by ref
 
   AverageHelper(current->getNext(), sum, count);
 }
-
-
-
-

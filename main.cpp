@@ -6,42 +6,36 @@ using namespace std;
 int main() {
 
     char answer[100];
-    slist mylist;
+    slist mylist; //creating a list to use
     char trash[100];
     while (true) {
-	    cout << "What would you like to do? (ADD/PRINT/DELETE/QUIT/AVERAGE): "; //<< endl;
-	   // cout << "Hint: Average requires you to have existing student data!" << endl;
+	    cout << "What would you like to do? (ADD/PRINT/DELETE/QUIT/AVERAGE): ";
 	    cin.getline(answer, 100);
 	    if (strcasecmp(answer, "ADD") == 0) {
 	        cout << "Please enter: (firstname) (lastname) studentid) (GPA)" << endl;
 	        char fname[100], lname[100]; int id; float gpa;
 	        cin >> fname >> lname >> id >> gpa;
 	        cin.getline(trash, 100); //To remove any lingering input
-	       // cout << "Name: " << fname << " " << lname << endl << "ID: " << id << " GPA: " << gpa << endl;
-	        Student* myStudent = new Student(fname, lname, id, gpa);
-	        mylist.Add(myStudent);
+	        Student* myStudent = new Student(fname, lname, id, gpa); //constructors a new student with the information
+	        mylist.Add(myStudent); //Uses the add function
 	    }
 	    else if (strcasecmp(answer, "PRINT") == 0) {
-	        mylist.Print();
-	        //Use PRINT function from llist.h to print all stored data
+	        mylist.Print(); //Use the print function
 	    }
 	    else if (strcasecmp(answer, "DELETE") == 0) {
 	        int id;
-	    	if (mylist.checkList() == false) {
-	    		cout << "This list is empty." << endl;
+	    	if (mylist.checkList() == false) { //If there's nothing in the list, use the checklist function
+	    		cout << "This list is empty." << endl; //If the checklist returns false, it means the list is empty, so no point in getting an input
 	    	}
 	    	else {
 	    		cout << "Please enter a student id to delete: ";
 	    		cin >> id;
 	    		cin.getline(trash, 100);
-	    		mylist.Delete(id);
+	    		mylist.Delete(id); //Run the delete function
 	    	}
-	        //Prompt user for student id and remove that specific node from the list, make sure the links are still the same
-	        //Make sure you have a destructor to remove unused memory if "new" is used
 	    }
 	    else if (strcasecmp(answer, "AVERAGE") == 0) {
-	    	mylist.Average();
-	        //Average the GPA for all stored users, print up to 2 decimal places
+	    	mylist.Average(); //Run the average function
 	    }
 	    else if (strcasecmp(answer, "QUIT") == 0) {
 	        cout << "Thank you." << endl;
@@ -51,5 +45,4 @@ int main() {
 	        cout << "This is invalid." << endl;
 	    }
         }
-
 }

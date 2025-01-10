@@ -4,7 +4,6 @@
 
 
 class slist {
-
 public:
     slist();
     ~slist();
@@ -19,12 +18,9 @@ public:
     bool checkList();
     void Average();
     void AverageHelper(Node* current, float& sum, int& count);
-
-
 private:
     Node* head;
     Node* tail;
-
 };
 
 #endif

@@ -2,8 +2,6 @@
 #define NODE_H
 #include "student.h"
 #include <iostream>
-//#include <cstring>
-
 using namespace std;
 
 class Node {
@@ -18,8 +16,5 @@ private:
     Student* student;   //pointer to student object
     Node* next;     //pointer to next node in list
 };
-
-
-
 
 #endif
