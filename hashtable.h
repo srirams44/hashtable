@@ -1,8 +1,8 @@
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
 #include "node.h"
+#include "student.h"
 #include <iostream>
-#include <cstring>
 
 
 

@@ -33,5 +33,5 @@ float Student::getGPA() const {
 Student::~Student() {
   delete[] fname;
   delete[] lname;
-  fname = lname = NULL;
+  fname = lname = nullptr;
 }
