@@ -1,6 +1,6 @@
 #include "hashtable.h"
 using namespace std;
-//Quick Comment for commit
+//Comment for second commit
 
 //Constructor
 hashTable::hashTable(int size) {

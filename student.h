@@ -1,7 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 #include <cstring>
-//Quick Comment for commit
+//Comment for second commit
 class Student {
     public:
         Student(const char* fname, const char* lname,  int id, float gpa); //Student Constructor

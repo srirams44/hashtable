@@ -1,6 +1,6 @@
 #include "node.h"
 #include <iostream>
-//Quick Comment for commit
+//Comment for second commit
 using namespace std; 
 
 //Node Constructor 

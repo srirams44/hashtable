@@ -2,7 +2,7 @@
 #include "node.h"
 #include "hashtable.h"
 using namespace std;
-//Quick Comment for commit
+//Comment for second commit
 int main() {
     //Rework everything for hashtable functionality
 }

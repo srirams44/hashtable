@@ -1,7 +1,7 @@
 #include <iostream>
 #include "student.h"
 #include <cstring>
-//Quick Comment for commit
+//Comment for second commit
 using namespace std;
 
 Student::Student(const char* argfname, const char* arglname, int argid, float arggpa) {
