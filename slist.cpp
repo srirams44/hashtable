@@ -4,7 +4,6 @@
 slist::slist() {
   head = nullptr;
   tail = nullptr;
-  cout << "Constructor: " << this << endl;
 }
 slist::~slist() {
   Node* current = head; //Start at the head, while current is not nullptr, save the current node, move to the next node and delete the temp variable
