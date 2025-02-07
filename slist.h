@@ -1,7 +1,7 @@
 #ifndef SLIST_H
 #define SLIST_H
 #include "node.h"
-
+//Quick Comment for commit
 
 class slist {
 public:

@@ -1,6 +1,6 @@
 #include "slist.h"
 #include <iomanip>
-
+//Quick Comment for commit
 slist::slist() {
   head = nullptr;
   tail = nullptr;
